@@ -1,277 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); /* Импортирует шрифт Ubuntu из Google Fonts с различными толщинами */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
+* {
+    margin: 0; /* Убирает отступы у всех элементов */
+    padding: 0; /* Убирает внутренние отступы у всех элементов */
+    box-sizing: border-box; /* Устанавливает модель коробки, чтобы padding и border входили в общую ширину и высоту элемента */
+    user-select: none; /* Запрещает пользователю выделять текст на странице */
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 12px;
-    background-color: #ecf0f3;
-    color: #a0a5a8;
+body {
+    width: 100%; /* Устанавливает ширину тела документа на 100% */
+    height: 100vh; /* Устанавливает высоту тела документа на 100% высоты окна браузера */
+    display: flex; /* Использует flexbox для выравнивания содержимого */
+    align-items: center; /* Выравнивает содержимое по вертикали по центру */
+    justify-content: center; /* Выравнивает содержимое по горизонтали по центру */
+    font-family: 'Ubuntu', sans-serif; /* Устанавливает шрифт Ubuntu для всего документа */
+    font-size: 12px; /* Устанавливает размер шрифта для всего документа */
+    background-color: #ecf0f3; /* Устанавливает светло-серый цвет фона для страницы */
+    color: #a0a5a8; /* Устанавливает цвет текста для всего документа */
 }
 
-.main{
-    position: relative;
-    width: 1000px;
-    min-width: 1000px;
-    min-height: 600px;
-    height: 600px;
-    padding: 25px;
-    background-color: #ecf0f3;
-    box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9;
-    border-radius: 12px;
-    overflow: hidden;
+.main {
+    position: relative; /* Устанавливает относительное позиционирование для контейнера */
+    width: 1000px; /* Устанавливает фиксированную ширину контейнера */
+    min-width: 1000px; /* Устанавливает минимальную ширину контейнера */
+    min-height: 600px; /* Устанавливает минимальную высоту контейнера */
+    height: 600px; /* Устанавливает фиксированную высоту контейнера */
+    padding: 25px; /* Устанавливает внутренние отступы для контейнера */
+    background-color: #ecf0f3; /* Устанавливает цвет фона для контейнера */
+    box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9; /* Добавляет тень к контейнеру с двумя направлениями */
+    border-radius: 12px; /* Закругляет углы контейнера */
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы контейнера */
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    width: 600px;
-    height: 100%;
-    padding: 25px;
-    background-color: #ecf0f3;
-    transition: 1.25s;
+.container {
+    display: flex; /* Использует flexbox для выравнивания содержимого внутри контейнера */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    position: absolute; /* Устанавливает абсолютное позиционирование для контейнера */
+    top: 0; /* Устанавливает верхнюю границу контейнера на 0 (прижимает к верхней части родительского элемента) */
+    width: 600px; /* Устанавливает фиксированную ширину контейнера */
+    height: 100%; /* Устанавливает высоту контейнера на 100% высоты родительского элемента */
+    padding: 25px; /* Устанавливает внутренние отступы для контейнера */
+    background-color: #ecf0f3; /* Устанавливает светло-серый цвет фона для контейнера */
+    transition: 1.25s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 1.25 секунд */
 }
 
-.form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+.form {
+    display: flex; /* Использует flexbox для выравнивания содержимого внутри формы */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    flex-direction: column; /* Устанавливает направление flex-элементов в колонку */
+    width: 100%; /* Устанавливает ширину формы на 100% ширины родительского контейнера */
+    height: 100%; /* Устанавливает высоту формы на 100% высоты родительского контейнера */
 }
 
-.form-icon{
-    object-fit: contain;
-    width: 30px;
-    margin: 0 5px;
-    opacity: 0.5;
-    transition: 0.15s;
+.form-icon {
+    object-fit: contain; /* Устанавливает, как изображение будет вписываться в контейнер (если это изображение) */
+    width: 30px; /* Устанавливает фиксированную ширину для иконки формы */
+    margin: 0 5px; /* Устанавливает горизонтальные отступы (по 5px слева и справа) */
+    opacity: 0.5; /* Устанавливает начальную прозрачность иконки на 50% */
+    transition: 0.15s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 0.15 секунд */
 }
 
-.form-icon:hover{
-    opacity: 1;
-    transition: 0.15s;
-    cursor: pointer;
+.form-icon:hover {
+    opacity: 1; /* Увеличивает прозрачность до 100% при наведении курсора на иконку */
+    transition: 0.15s; /* Устанавливает плавный переход для изменения прозрачности при наведении */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении на иконку */
 }
 
-.form-input{
-    width: 350px;
-    height: 40px;
-    margin: 4px 0;
-    padding-left: 25px;
-    font-size: 13px;
-    letter-spacing: 0.15px;
-    border: none;
-    outline: none;
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #ecf0f3;
-    transition: 0.25s ease;
-    border-radius: 8px;
-    box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+.form-input {
+    width: 350px; /* Устанавливает фиксированную ширину для поля ввода */
+    height: 40px; /* Устанавливает фиксированную высоту для поля ввода */
+    margin: 4px 0; /* Устанавливает вертикальные отступы (4px сверху и снизу) */
+    padding-left: 25px; /* Устанавливает внутренний отступ слева для текста в поле ввода */
+    font-size: 13px; /* Устанавливает размер шрифта для текста в поле ввода */
+    letter-spacing: 0.15px; /* Устанавливает расстояние между буквами в тексте */
+    border: none; /* Убирает рамку у поля ввода */
+    outline: none; /* Убирает обводку при фокусировке на поле ввода */
+    font-family: 'Ubuntu', sans-serif; /* Устанавливает шрифт Ubuntu для текста в поле ввода */
+    background-color: #ecf0f3; /* Устанавливает светло-серый цвет фона для поля ввода */
+    transition: 0.25s ease; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 0.25 секунд */
+    border-radius: 8px; /* Закругляет углы поля ввода */
+    box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9; /* Добавляет внутреннюю тень к полю ввода для создания эффекта глубины */
 }
 
-.form-input:focus{
-    box-shadow: inset 4px 4px 4px #d1d9e6, inset -4px -4px 4px #f9f9f9;
+.form-input:focus {
+    box-shadow: inset 4px 4px 4px #d1d9e6, inset -4px -4px 4px #f9f9f9; /* Увеличивает внутреннюю тень при фокусировке на поле ввода для выделения */
 }
 
-.form-span{
-    margin-top: 30px;
-    margin-bottom: 12px;
+.form-span {
+    margin-top: 30px; /* Устанавливает верхний отступ для элемента span (30px) */
+    margin-bottom: 12px; /* Устанавливает нижний отступ для элемента span (12px) */
 }
 
-.form-link{
-    color: #181818;
-    font-size: 15px;
-    margin-top: 25px;
-    border-bottom: 1px solid #a0a5a8;
-    line-height: 2;
+.form-link {
+    color: #181818; /* Устанавливает цвет текста для ссылки */
+    font-size: 15px; /* Устанавливает размер шрифта для текста ссылки */
+    margin-top: 25px; /* Устанавливает верхний отступ для ссылки (25px) */
+    border-bottom: 1px solid #a0a5a8; /* Добавляет нижнюю рамку к ссылке */
+    line-height: 2; /* Устанавливает высоту строки для текста ссылки */
 }
 
-.form-button{
-    border: 2px solid transparent;
-    transition: all 0.3s;
+.form-button {
+    border: 2px solid transparent; /* Устанавливает рамку шириной 2px, изначально прозрачную */
+    transition: all 0.3s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 0.3 секунд */
 }
 
-.title{
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 3;
-    color: #181818;
+.title {
+    font-size: 34px; /* Устанавливает размер шрифта для заголовка */
+    font-weight: 700; /* Устанавливает толщину шрифта для заголовка (жирный) */
+    line-height: 3; /* Устанавливает высоту строки для заголовка */
+    color: #181818; /* Устанавливает цвет текста для заголовка */
 }
 
-.description{
-    font-size: 14px;
-    letter-spacing: 0.25px;
-    text-align: center;
-    line-height: 1.6;
+.description {
+    font-size: 14px; /* Устанавливает размер шрифта для описания */
+    letter-spacing: 0.25px; /* Устанавливает расстояние между буквами в тексте описания */
+    text-align: center; /* Выравнивает текст описания по центру */
+    line-height: 1.6; /* Устанавливает высоту строки для текста описания */
 }
 
-.button{
-    width: 180px;
-    height: 50px;
-    border-radius: 25px;
-    margin-top: 50px;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1.15px;
-    background-color: #4b70e2;
-    color: #f9f9f9;
-    box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.button {
+    width: 180px; /* Устанавливает фиксированную ширину для кнопки */
+    height: 50px; /* Устанавливает фиксированную высоту для кнопки */
+    border-radius: 25px; /* Закругляет углы кнопки */
+    margin-top: 50px; /* Устанавливает верхний отступ для кнопки (50px) */
+    font-weight: 700; /* Устанавливает толщину шрифта для текста кнопки (жирный) */
+    font-size: 14px; /* Устанавливает размер шрифта для текста кнопки */
+    letter-spacing: 1.15px; /* Устанавливает расстояние между буквами в тексте кнопки */
+    background-color: #4b70e2; /* Устанавливает цвет фона для кнопки */
+    color: #f9f9f9; /* Устанавливает цвет текста для кнопки */
+    box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9; /* Добавляет тень к кнопке с двумя направлениями для создания эффекта глубины */
+    border: none; /* Убирает рамку у кнопки */
+    outline: none; /* Убирает обводку при фокусировке на кнопке */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении на кнопку */
 }
 
-.register-form{
-    z-index: 100;
-    left: calc(100% - 600px);
+.register-form {
+    z-index: 100; /* Устанавливает уровень наложения для формы регистрации (выше, чем у формы входа) */
+    left: calc(100% - 600px); /* Устанавливает позицию формы регистрации на 600px от правого края экрана */
 }
 
-.login-form{
-    z-index: 0;
-    left: calc(100% - 600px);
+.login-form {
+    z-index: 0; /* Устанавливает уровень наложения для формы входа (ниже, чем у формы регистрации) */
+    left: calc(100% - 600px); /* Устанавливает позицию формы входа на 600px от правого края экрана */
 }
 
-.switch{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 400px;
-    padding: 50px;
-    z-index: 200;
-    transition: 1.25s;
-    background-color: #ecf0f3;
-    overflow: hidden;
-    box-shadow: 4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9;
+.switch {
+    display: flex; /* Использует flexbox для выравнивания содержимого внутри переключателя */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    position: absolute; /* Устанавливает абсолютное позиционирование для переключателя */
+    top: 0; /* Устанавливает верхнюю границу переключателя на 0 (прижимает к верхней части родительского элемента) */
+    left: 0; /* Устанавливает левую границу переключателя на 0 (прижимает к левой части родительского элемента) */
+    height: 100%; /* Устанавливает высоту переключателя на 100% высоты родительского элемента */
+    width: 400px; /* Устанавливает фиксированную ширину для переключателя */
+    padding: 50px; /* Устанавливает внутренние отступы для переключателя */
+    z-index: 200; /* Устанавливает уровень наложения для переключателя (выше, чем у форм) */
+    transition: 1.25s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 1.25 секунд */
+    background-color: #ecf0f3; /* Устанавливает светло-серый цвет фона для переключателя */
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы переключателя */
+    box-shadow: 4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9; /* Добавляет тень к переключателю с двумя направлениями для создания эффекта глубины */
 }
 
-.switch-circle{
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background-color: #ecf0f3;
-    box-shadow: inset 8px 8px 12px #d1d9e6,inset -8px -8px 12px #f9f9f9;
-    bottom: -60%;
-    left: -60%;
-    transition: 1.25s;
+.switch-circle {
+    position: absolute; /* Устанавливает абсолютное позиционирование для круга переключателя */
+    width: 500px; /* Устанавливает фиксированную ширину для круга переключателя */
+    height: 500px; /* Устанавливает фиксированную высоту для круга переключателя */
+    border-radius: 50%; /* Закругляет углы круга, создавая форму круга */
+    background-color: #ecf0f3; /* Устанавливает светло-серый цвет фона для круга переключателя */
+    box-shadow: inset 8px 8px 12px #d1d9e6, inset -8px -8px 12px #f9f9f9; /* Добавляет внутреннюю тень к кругу для создания эффекта глубины */
+    bottom: -60%; /* Устанавливает нижнюю границу круга на 60% ниже родительского элемента */
+    left: -60%; /* Устанавливает левую границу круга на 60% левее родительского элемента */
+    transition: 1.25s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 1.25 секунд */
 }
 
-.switch-circle-t{
-    top: -30%;
-    left: 60%;
-    width: 300px;
-    height: 300px;
+.switch-circle-t {
+    top: -30%; /* Устанавливает верхнюю границу для второго круга на 30% выше родительского элемента */
+    left: 60%; /* Устанавливает левую границу для второго круга на 60% правее родительского элемента */
+    width: 300px; /* Устанавливает фиксированную ширину для второго круга */
+    height: 300px; /* Устанавливает фиксированную высоту для второго круга */
 }
 
-.switch-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    width: 400px;
-    padding: 50px 55px;
-    transition: 1.25s;
+.switch-form {
+    display: flex; /* Использует flexbox для выравнивания содержимого внутри формы переключения */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    flex-direction: column; /* Устанавливает направление flex-элементов в колонку */
+    position: absolute; /* Устанавливает абсолютное позиционирование для формы переключения */
+    width: 400px; /* Устанавливает фиксированную ширину для формы переключения */
+    padding: 50px 55px; /* Устанавливает внутренние отступы для формы переключения (50px сверху и снизу, 55px слева и справа) */
+    transition: 1.25s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 1.25 секунд */
 }
 
-.switch-button{
-    cursor: pointer;
-    transition: all 0.3s;
-    border: 2px solid transparent;
+.switch-button {
+    cursor: pointer; /* Изменяет курсор на указатель при наведении на кнопку переключения */
+    transition: all 0.3s; /* Устанавливает плавный переход для всех свойств, изменяющихся в течение 0.3 секунд */
+    border: 2px solid transparent; /* Устанавливает рамку шириной 2px, изначально прозрачную */
 }
 
-.switch-button:hover, .form-button:hover{
-    background-color: transparent;
-    border: 2px solid #4b70e2;
-    color: #4b70e2;
-    transition: all 0.3s;
+.switch-button:hover, .form-button:hover {
+    /* При наведении курсора на кнопку переключения или форму */
+    background-color: transparent; /* Устанавливаем прозрачный фон */
+    border: 2px solid #4b70e2; /* Устанавливаем границу 2px с цветом #4b70e2 */
+    color: #4b70e2; /* Устанавливаем цвет текста #4b70e2 */
+    transition: all 0.3s; /* Добавляем плавный переход для всех свойств за 0.3 секунды */
 }
 
-.switch-button:focus, .switch-button:active{
-    box-shadow: 2px 2px 6px #d1d9e6, -2px -2px 6px #f9f9f9;
-    transform: scale(0.97);
-    transition: 0.25s;
+.switch-button:focus, .switch-button:active {
+    /* При фокусировке или активном состоянии кнопки переключения */
+    box-shadow: 2px 2px 6px #d1d9e6, -2px -2px 6px #f9f9f9; /* Добавляем тень для создания эффекта глубины */
+    transform: scale(0.97); /* Уменьшаем размер кнопки до 97% */
+    transition: 0.25s; /* Добавляем плавный переход для всех свойств за 0.25 секунды */
 }
 
-.is-txr{
-    left: calc(100% - 400px);
-    transition: 1.25s;
-    transform-origin: left;
+.is-txr {
+    /* Класс для элемента, который должен быть расположен справа */
+    left: calc(100% - 400px); /* Устанавливаем позицию слева на 100% ширины минус 400px */
+    transition: 1.25s; /* Добавляем плавный переход для всех свойств за 1.25 секунды */
+    transform-origin: left; /* Устанавливаем точку трансформации слева */
 }
 
-.is-txl{
-    left: 0;
-    transition: 1.25s;
-    transform-origin: right;
+.is-txl {
+    /* Класс для элемента, который должен быть расположен слева */
+    left: 0; /* Устанавливаем позицию слева на 0 */
+    transition: 1.25s; /* Добавляем плавный переход для всех свойств за 1.25 секунды */
+    transform-origin: right; /* Устанавливаем точку трансформации справа */
 }
 
-.is-z200{
-    z-index: 200;
-    transition: 1.25s;
+.is-z200 {
+    /* Класс для элемента с высоким z-index */
+    z-index: 200; /* Устанавливаем z-index на 200 для управления наложением элементов */
+    transition: 1.25s; /* Добавляем плавный переход для всех свойств за 1.25 секунды */
 }
 
-.is-hidden{
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    transition: 1.25s;
+.is-hidden {
+    /* Класс для скрытия элемента */
+    visibility: hidden; /* Элемент не видим, но занимает место в потоке документа */
+    opacity: 0; /* Полная прозрачность (невидимый) */
+    position: absolute; /* Элемент позиционируется абсолютно относительно ближайшего родителя с относительным позиционированием */
+    transition: 1.25s; /* Добавляем плавный переход для всех свойств за 1.25 секунды */
 }
 
-.is-gx{
-    animation: is-gx 1.25s;
+.is-gx {
+    /* Класс для применения анимации */
+    animation: is-gx 1.25s; /* Применяем анимацию is-gx с длительностью 1.25 секунды */
 }
 
 @keyframes is-gx {
-    0%,
-    10%,
-    100%{
-        width: 400px;
+    /* Определение ключевых кадров для анимации is-gx */
+    0%, 10%, 100% { 
+        /* На 0%, 10% и 100% анимации ширина элемента равна 400px */
+        width: 400px; 
     }
-    30%,
-    50%{
-        width: 500px;
-    }
-}
-
-@media (max-width: 1200px){
-    .main{
-        transform: scale(0.7);
+    30%, 50% { 
+        /* На 30% и 50% анимации ширина элемента увеличивается до 500px */
+        width: 500px; 
     }
 }
 
-@media (max-width: 1000px){
-    .main{
-        transform: scale(0.6);
+@media (max-width: 1200px) {
+    /* Медиа-запрос для экранов шириной 1200px и меньше */
+    .main {
+        transform: scale(0.7); /* Уменьшаем масштаб элемента .main до 70% */
     }
 }
 
-@media (max-width: 800px){
-    .main{
-        transform: scale(0.5);
+@media (max-width: 1000px) {
+    /* Медиа-запрос для экранов шириной 1000px и меньше */
+    .main {
+        transform: scale(0.6); /* Уменьшаем масштаб элемента .main до 60% */
     }
 }
 
-@media (max-width: 600px){
-    .main{
-        transform: scale(0.4);
+@media (max-width: 800px) {
+    /* Медиа-запрос для экранов шириной 800px и меньше */
+    .main {
+        transform: scale(0.5); /* Уменьшаем масштаб элемента .main до 50% */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Медиа-запрос для экранов шириной 600px и меньше */
+    .main {
+        transform: scale(0.4); /* Уменьшаем масштаб элемента .main до 40% */
     }
 }
